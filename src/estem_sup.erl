@@ -3,7 +3,7 @@
 %%% @doc JInterface Sample Application Main Supervisor
 %%% @end
 %%%-------------------------------------------------------------------
--module(ejis_sup).
+-module(estem_sup).
 -author('elbrujohalcon@inaka.net').
 
 -behaviour(supervisor).
@@ -29,5 +29,5 @@ init([]) ->
   {ok,
     {_SupFlags = {one_for_one, 0, 1},
       [
-        {ejis_java, {ejis_java, start_link, []}, permanent, 2000, worker, [ejis_java]}
+        {estem_java, {estem_java, start_link, []}, permanent, 2000, worker, [estem_java]}
       ]}}.

@@ -1,4 +1,4 @@
-package net.inaka.ejis;
+package estem;
 
 import java.util.logging.Logger;
 
@@ -13,18 +13,18 @@ import com.ericsson.otp.stdlib.OtpStopException;
 
 /**
  * @author Fernando Benavides <elbrujohalcon@inaka.net> Main OtpGenServer for
- *         Ejis
+ *         Estem
  */
-public class EjisServer extends OtpGenServer {
-	private static final Logger	jlog	= Logger.getLogger(EjisServer.class
+public class EstemServer extends OtpGenServer {
+	private static final Logger	jlog	= Logger.getLogger(EstemServer.class
 												.getName());
 
 	/**
 	 * @param host
 	 *            OtpNode where to create the OtpGenServer
 	 */
-	public EjisServer(OtpNode host) {
-		super(host, "ejis_server");
+	public EstemServer(OtpNode host) {
+		super(host, "estem_server");
 	}
 
 	@Override

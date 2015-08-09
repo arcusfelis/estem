@@ -3,7 +3,7 @@
 %%% @doc JInterface Sample Application
 %%% @end
 %%%-------------------------------------------------------------------
--module(ejis).
+-module(estem).
 -author('elbrujohalcon@inaka.net').
 
 -behaviour(application).
@@ -27,8 +27,8 @@ stop() -> application:stop(?MODULE).
 %%-------------------------------------------------------------------
 %% @private
 -spec start(any(), any()) -> {ok, pid()}.
-start(_StartType, _StartArgs) -> ejis_sup:start_link().
+start(_StartType, _StartArgs) -> estem_sup:start_link().
 
 %% @private
 -spec stop(any()) -> ok.
-stop(_State) -> ejis_java:stop().
+stop(_State) -> estem_java:stop().

@@ -3,13 +3,13 @@
 %%% @doc Java Interface.
 %%% @end
 %%%-------------------------------------------------------------------
--module(ejis_java).
+-module(estem_java).
 -author('elbrujohalcon@inaka.net').
 
 %%NOTE: We let java server run for as long as it needs to run.
 %%      Even if we choose a smaller timeout, it will run for a longer time anyway if it needs to.
 -define(CALL_TIMEOUT, infinity).
--define(JAVA_SERVER, {ejis_server, java_node()}).
+-define(JAVA_SERVER, {estem_server, java_node()}).
 
 -behavior(gen_server).
 
@@ -56,7 +56,7 @@ init([]) ->
         erlang:open_port({spawn_executable, Java},
                          [{line, 1000}, stderr_to_stdout,
                           {args, ["-classpath", Classpath,
-                                  "net.inaka.ejis.EjisNode",
+                                  "estem.EstemNode",
                                   ThisNode, JavaNode, erlang:get_cookie()]}]),
       wait_for_ready(#state{java_port = Port, java_node = JavaNode})
   end.

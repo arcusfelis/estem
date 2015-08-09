@@ -10,4 +10,4 @@ logs
 erl_crash.dump
 *.beam
 *.log
-ejis.jar
+estem.jar

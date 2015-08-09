@@ -1,0 +1,11 @@
+{application, estem,
+ [
+  {description, "Stempel (polish stemmer) for Erlang"},
+  {vsn, "0.1"},
+  {id, "estem"},
+  {registered,   []},
+  {applications, [kernel,stdlib,lager]},
+  {mod, {estem, []}},
+  {env, []}
+ ]
+}.

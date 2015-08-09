@@ -1,4 +1,4 @@
-package net.inaka.ejis;
+package estem;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -7,11 +7,11 @@ import com.ericsson.otp.erlang.OtpNode;
 import com.ericsson.otp.stdlib.OtpGenServer;
 
 /**
- * @author Fernando Benavides <elbrujohalcon@inaka.net> Main node for Ejis
+ * @author Fernando Benavides <elbrujohalcon@inaka.net> Main node for Estem
  *         Server
  */
-public class EjisNode {
-	private static final Logger	jlog	= Logger.getLogger(EjisNode.class
+public class EstemNode {
+	private static final Logger	jlog	= Logger.getLogger(EstemNode.class
 												.getName());
 
 	/**
@@ -39,8 +39,8 @@ public class EjisNode {
 			NODE = args.length >= 3 ? new OtpNode(nodeName, args[2])
 					: new OtpNode(nodeName);
 			PEER = peerName;
-			final OtpGenServer server = new EjisServer(NODE);
-			jlog.info("Ejis Node Started at: " + nodeName
+			final OtpGenServer server = new EstemServer(NODE);
+			jlog.info("Estem Node Started at: " + nodeName
 					+ "\nConnected to: " + PEER);
 			forever(server);
 			System.out.println("READY");
@@ -52,7 +52,7 @@ public class EjisNode {
 	}
 
 	protected static void forever(final OtpGenServer server) {
-		new Thread("EjisServer") {
+		new Thread("EstemServer") {
 			@Override
 			public void run() {
 				while (true) {
