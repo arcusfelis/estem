@@ -51,7 +51,7 @@ public class EstemServer extends OtpGenServer {
               OtpErlangBinary stringBin = (OtpErlangBinary) stringList.elementAt(i);
               
               byte[] bytes = stringBin.binaryValue();
-              token = new String(bytes);
+              token = new String(bytes, Charset.forName("UTF-8"));
 
               res = stemmer.stem(token, false);
               
