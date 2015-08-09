@@ -16,7 +16,7 @@
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2, code_change/3]).
 -export([start_link/0, stop/0]).
 
--export([pid/0]).
+-export([pid/0, stem/1]).
 
 -record(state, {java_port :: port(),
                 java_node :: atom()}).
@@ -32,6 +32,9 @@ start_link() -> gen_server:start_link({local, ?MODULE}, ?MODULE, [], []).
 %% @doc Returns the pid of the java process
 -spec pid() -> pid().
 pid() -> gen_server:call(?JAVA_SERVER, {pid}, ?CALL_TIMEOUT).
+
+-spec stem(binary()) -> [binary()].
+stem(Binary) -> gen_server:call(?JAVA_SERVER, {stem, Binary}, ?CALL_TIMEOUT).
 
 %% @doc Stops the java process
 -spec stop() -> ok.
