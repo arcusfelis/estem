@@ -1,6 +1,14 @@
 Stempel (polish stemmer) for Erlang
 =================
 
+License: Apache 2 for the bindings (Stempel has its own license).
+Also, these two files are blobs:
+- priv/lucene-1.4-final.jar
+- priv/stempel-1.0.jar
+
+You can compile them from here http://www.getopt.org/stempel/#distrib
+
+
 Start node in dev mode
 
 ```erlang

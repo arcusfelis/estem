@@ -17,10 +17,6 @@ import com.ericsson.otp.stdlib.OtpGenServer;
 import com.ericsson.otp.stdlib.OtpStopException;
 import org.getopt.stempel.Stemmer;
 
-/**
- * @author Fernando Benavides <elbrujohalcon@inaka.net> Main OtpGenServer for
- *         Estem
- */
 public class EstemServer extends OtpGenServer {
 	private static final Logger	jlog	= Logger.getLogger(EstemServer.class
 												.getName());

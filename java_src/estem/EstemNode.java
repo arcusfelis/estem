@@ -6,10 +6,6 @@ import java.util.logging.Logger;
 import com.ericsson.otp.erlang.OtpNode;
 import com.ericsson.otp.stdlib.OtpGenServer;
 
-/**
- * @author Fernando Benavides <elbrujohalcon@inaka.net> Main node for Estem
- *         Server
- */
 public class EstemNode {
 	private static final Logger	jlog	= Logger.getLogger(EstemNode.class
 												.getName());
